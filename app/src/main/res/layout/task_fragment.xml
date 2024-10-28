@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="All"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/skyblue"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Work"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/skyblue"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Personal"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/skyblue"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Wishlist"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/skyblue"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                tools:itemCount="2"
+                android:scrollbars="none"
+                android:nestedScrollingEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/todolist"
+                android:id="@+id/recycler_todolist"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/recycler_todolist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/done_ll"
+                android:orientation="horizontal">
+                <TextView
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selesai"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/baseline_arrow_drop_up_24"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                tools:itemCount="2"
+                android:scrollbars="none"
+                android:nestedScrollingEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/todolist"
+                android:layout_below="@id/done_ll"
+                android:id="@+id/recycler_complite"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/confusion"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/image_unknown"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        android:layout_margin="20dp"
+        android:id="@+id/floatingaction_btn"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/skyblue"
+        android:contentDescription="Add"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

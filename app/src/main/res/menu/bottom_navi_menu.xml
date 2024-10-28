@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_drawable"
+        android:icon="@drawable/baseline_dehaze_24"
+        android:title="Open"/>
+
+    <item
+        android:id="@+id/task_activity"
+        android:icon="@drawable/baseline_event_note_24"
+        android:title="Tasks"/>
+
+    <item
+        android:id="@+id/calendar_activity"
+        android:icon="@drawable/baseline_calendar_month_24"
+        android:title="Calendar"/>
+
+    <item
+        android:id="@+id/profile_activity"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Profile"/>
+</menu>

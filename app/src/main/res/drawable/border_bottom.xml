@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background color, bisa diatur ke warna apa saja atau transparan -->
+    <item android:top="1dp" android:left="0dp" android:right="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <!-- Border bottom -->
+    <item android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <size android:height="5dp"/> <!-- Ketebalan garis bawah -->
+            <solid android:color="@color/grey" /> <!-- Warna garis bawah -->
+        </shape>
+    </item>
+</layer-list>
